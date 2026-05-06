@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Pipes of Farawayland</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <!-- START SCREEN -->
+        <section id="start-screen">
+            <h1>Water Pipes of Farawayland</h1>
+
+            <div class="panel">
+                <h2>Rules</h2>
+                <ul>
+                    <li>Rotate the pipes so water reaches every consumer (indicated by circles).</li>
+                    <li>For the consumer endpoints, the side with the capped line (╹) should connect to the other pipes.</li>
+                    <li>Every pipe must be connected to the source (indicated by red cell).</li>
+                    <li>If the water flow is connected, the cell will turn blue.</li>
+                    <li>If the water flow is disconnected, the cell will remain white.</li>
+                    <li>The network must not contain cycles (do not connect the pipes so they form a complete loop).</li>
+                    <li>Neighboring pipes must connect correctly, and open ends must not leak.</li>
+                </ul>
+            </div>
+
+            <div class="panel">
+                <label for="player-name">Name:</label>
+                <input type="text" id="player-name" required>
+
+                <br><br>
+
+                <label for="difficulty">Difficulty:</label>
+                <select id="difficulty">
+                    <option value="easy">Easy</option>
+                    <option value="intermediate">Intermediate</option>
+                    <option value="hard">Hard</option>
+                </select>
+
+                <br><br>
+
+                <button id="start-button">Start Game</button>
+                <button id="continue-button">Continue</button>
+
+                <p id="start-message"></p>
+            </div>
+
+            <div class="panel">
+                <h2>Leaderboard</h2>
+                <div id="leaderboard"></div>
+            </div>
+        </section>
+
+        <!-- GAME SCREEN -->
+        <section id="game-screen" style="display: none;">
+            <p>
+                Player: <span id="display-name"></span>
+            </p>
+
+            <p>
+                Difficulty: <span id="display-difficulty"></span>
+            </p>
+
+            <p>
+                Time: <span id="elapsed-time">0</span> s
+            </p>
+
+            <p id="game-message"></p>
+
+            <div id="board"></div>
+
+            <br>
+
+            <button id="save-button">Save</button>
+            <button id="back-button">Back to Menu</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

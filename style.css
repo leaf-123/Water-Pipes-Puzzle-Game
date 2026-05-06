@@ -1,0 +1,131 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.panel {
+    background-color: white;
+    border: 1px solid #cccccc;
+    padding: 16px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+#start-message {
+    margin-top: 12px;
+    font-weight: bold;
+    color: red;
+}
+
+button {
+    padding: 8px 14px;
+    margin-right: 8px;
+    border: 1px solid #999999;
+    border-radius: 6px;
+    background-color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #eeeeee;
+}
+
+#game-screen {
+    background-color: white;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+#game-message {
+    font-weight: bold;
+    margin: 10px 0;
+    color: green;
+}
+
+#board {
+    display: grid;
+    gap: 4px;
+    margin-top: 20px;
+    justify-content: start;
+}
+
+.cell {
+    width: 60px;
+    height: 60px;
+    border: 1px solid black;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.cell:hover {
+    outline: 2px solid #666666;
+}
+
+.rot-0 {
+    transform: rotate(0deg);
+}
+
+.rot-90 {
+    transform: rotate(90deg);
+}
+
+.rot-180 {
+    transform: rotate(180deg);
+}
+
+.rot-270 {
+    transform: rotate(270deg);
+}
+
+.pipe-symbol {
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 1;
+    user-select: none;
+}
+
+.pipe-straight {
+    color: #1565c0;
+}
+
+.pipe-bend {
+    color: #2e7d32;
+}
+
+.pipe-t {
+    color: #c62828;
+}
+
+.pipe-end {
+    color: #1b5e20;
+}
+
+.cell-filled {
+    background-color: #bbdefb;
+}
+
+.cell-empty {
+    background-color: white;
+}
+
+.cell-source {
+    background-color: #d32f2f;
+    color: white;
+}
+
+.cell-consumer {
+    border: 2px solid black;
+    border-radius: 50%;
+}
