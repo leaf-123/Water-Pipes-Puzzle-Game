@@ -1,4 +1,4 @@
-# Water Pipes of Farawayland
+# Water Pipes Puzzle Game
 
 A browser-based puzzle game created for a Web Programming course assignment using HTML, CSS, and JavaScript.
 
